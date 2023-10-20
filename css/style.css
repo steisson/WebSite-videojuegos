@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Pixelify+Sans:wght@400;500;600&display=swap');
+
+* {
+  font-family: 'Dosis', sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
+}
+
+.navbar a.nav-link {
+  transition: text-shadow 0.3s;
+}
+
+.navbar a.nav-link:hover {
+  text-shadow: 2px 2px 4px #fffbfb;
+}
+
+#carouselheroCaptions {
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.carousel-inner {
+  max-height: 400px;
+}
+
+.carousel-inner .carousel-item {
+  max-height: 400px;
+}
+
+.carousel-inner img {
+  max-width: 100%;
+}
+
+.carousel-caption {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+article {
+  position: relative;
+  width: 250px;
+  transition: all .3s ease;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
+
+article img:first-child {
+  box-shadow: 0 60px 60px -60px #00ff7380;
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+article img:last-child {
+  position: absolute;
+  margin-top: 20px; 
+  margin-bottom: 20px;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: .3s ease;
+  opacity: 0;
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) 
+  translateY(-5%) translateZ(0);
+}
+
+article::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(to bottom, transparent 10%,
+   #00000080 50%, #00000000 95%);
+  opacity: 0;
+  transition: all .3s ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+article img:first-child,
+article img:last-child {
+    float: left; 
+    margin-right: 20px; 
+    margin-bottom: 20px; 
+}
+
+article::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#arcades{
+  width: 100%;
+  position: relative;
+  padding: 120px 0;
+  background: url("../img/arcade/arcade.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#arcades h2{
+  color: #ffffff;
+  text-align: center;
+  padding: 0 60px;
+  font-style: italic;
+}
+
+#arcade {
+  width: 100%;
+  position: relative;
+  padding: 100px 0;
+}
+
+#arcade h2 {
+  color: #040404;
+  font-size: 36px;
+  border-bottom: 2px solid #abeb63;
+  display: inline-block;
+  margin-bottom: 80px;
+}
+
+#arcade h2 span {
+  font-size: 54px;
+}
+
+#arcade .card-arcade {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  margin-bottom: 40px;
+  max-width: 100%;
+  height: 200px; 
+  object-fit: cover;
+}
+
+#arcade .card-arcade::after {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  content: "";
+  background: #00f2ff0b;
+  transition: .5s;
+}
+
+#arcade .card-arcade a {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 26px;
+  text-decoration: none;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 250px;
+  text-align: center;
+  transition: .5s;
+}
+
+#arcade .card-arcade:hover a {
+  background: #ffffff;
+  color: #000000;
+  bottom: 48%;
+}
+
+footer {
+  background: #3d995c;
+  color: #000000;
+  padding: 40px;
+  text-align: center;
+}
